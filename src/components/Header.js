@@ -10,15 +10,23 @@ export default function Header() {
     history.push("/login");
   }
   return (
-    <div className="flex ">
-      <h1>FRIENDS DATABASE</h1>
-      <nav className="flex gap-3">
-        <NavLink className="bg-black text-white py-5 px-3" to="/login">
+    <div className="flex justify-around px-10 py-4 items-center font-extrabold">
+      <h1 className="text-black text-2xl">FRIENDS DATABASE</h1>
+      <nav className="flex gap-4">
+        <NavLink className="bg-black text-white  py-5 px-3" to="/login">
           LOGIN.
         </NavLink>
-        <NavLink to="/friends">FRIENDLIST.</NavLink>
-        <NavLink to="/friends/add">ADDFRIEND.</NavLink>
-        <NavLink to="/logout" onClick={Logout}>
+        <NavLink className="bg-black text-white  py-5 px-3" to="/friends">
+          FRIENDLIST.
+        </NavLink>
+        <NavLink className="bg-black text-white  py-5 px-3" to="/friends/add">
+          ADDFRIEND.
+        </NavLink>
+        <NavLink
+          className="bg-black text-white font-bold py-5 px-3"
+          to="/logout"
+          onClick={Logout}
+        >
           LOGOUT
         </NavLink>
       </nav>

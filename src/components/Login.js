@@ -31,25 +31,34 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">USERNAME</label>
+    <div className="font-black text-xl mt-10 w-1/3 mx-auto">
+      <h2 className="text-7xl mb-4">LOGIN</h2>
+      <form className="flex flex-col" onSubmit={handleSubmit}>
+        <label htmlFor="username" className="text-left">
+          USERNAME
+        </label>
         <input
           type="text"
           id="username"
           name="username"
+          className="bg-black text-white py-4 px-4 mb-4"
           value={formData.username}
           onChange={handleChange}
         />
-        <label htmlFor="password">PASSWORD</label>
+        <label htmlFor="password" className="text-left">
+          PASSWORD
+        </label>
         <input
           type="password"
           id="password"
           name="password"
+          className="bg-black text-white py-4 px-4"
           value={formData.password}
           onChange={handleChange}
         />
-        <button>SUBMIT</button>
+        <button type="submit" className="bg-black text-white py-4 px-4 mt-4">
+          SUBMIT
+        </button>
       </form>
     </div>
   );

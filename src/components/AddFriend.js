@@ -34,26 +34,37 @@ export default function AddFriend() {
       .catch((err) => console.log(err));
   }
   return (
-    <div>
-      <h1>ADD FRIEND</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name"> FRIEND NAME </label>
+    <div className="font-black text-xl mt-10 w-1/3 mx-auto">
+      <h2 className="text-7xl mb-4">ADD FRIEND</h2>
+      <form className="flex flex-col" onSubmit={handleSubmit}>
+        <label className="text-left" htmlFor="name">
+          {" "}
+          FRIEND NAME{" "}
+        </label>
         <input
           type="text"
           id="name"
           name="name"
+          className="bg-black text-white py-4 px-4 mb-4"
           value={newFriend.name}
           onChange={handleChange}
         />
-        <label htmlFor="email"> FRIEND EMAIL </label>
+        <label className="text-left" htmlFor="email">
+          {" "}
+          FRIEND EMAIL{" "}
+        </label>
         <input
           type="email"
           id="email"
           name="email"
+          className="bg-black text-white py-4 px-4 mb-4"
           value={newFriend.email}
           onChange={handleChange}
         />
-        <button type="submit"> SUBMIT </button>
+        <button type="submit" className="bg-black text-white py-4 px-4 mt-4">
+          {" "}
+          SUBMIT{" "}
+        </button>
       </form>
     </div>
   );

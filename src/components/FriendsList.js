@@ -22,12 +22,12 @@ export default function FriendsList() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div>
-      <h1>FRIENDS LIST</h1>
-      <div>
+    <div className="text-black font-extrabold text-xl w-1/3 mx-auto mt-10">
+      <h1 className="text-6xl mb-4 text-left">FRIENDS LIST</h1>
+      <div className="flex flex-col items-start gap-3">
         {friends.map((item) => (
           <h2 key={item.id}>
-            {item.name} - {item.email}
+            - {item.name} - {item.email}
           </h2>
         ))}
       </div>
