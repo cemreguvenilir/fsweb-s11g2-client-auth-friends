@@ -23,7 +23,7 @@ export default function Header() {
           ADDFRIEND.
         </NavLink>
         <NavLink
-          className="bg-black text-white font-bold py-5 px-3"
+          className="bg-black text-white py-5 px-3"
           to="/logout"
           onClick={Logout}
         >
